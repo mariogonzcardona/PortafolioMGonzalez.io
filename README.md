@@ -10,7 +10,7 @@ Este proyecto es desarrollado para reforzar los conocimientos en HTML y CSS, com
 
 Pagina web aun en desarrollo para la implementación y visualización de portafolio de proyectos.
 
-* [Portfolio] - Pagina HTML!
+* [Portfolio] - Pagina HTML
 
 ### Actividades a realizar
 
