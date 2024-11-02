@@ -3,200 +3,131 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mario González</title>
-    <link rel="icon" type="image/jpg" href="images/logoMG3.jpg">
-    <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)">
-    <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Mario González - CV Online</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <i class="icon-menu burger-button" id="burger-menu"></i>
-
-    <header class="header">
+    <!-- Navegación -->
+    <header class="navbar">
         <div class="container">
-            <figure class="logo">
-                <img src="images/Logo.jpg" alt="Logo de Pagina" height="50px">
-            </figure>
-            <nav class="menu">
-                <ol>
-                    <li>
-                        <a class="link" href="#portafolio">Portafolio</a>
-                    </li>
-                    <li>
-                        <a class="link" href="#eventos">Experiencia</a>
-                    </li>
-                    <li>
-                        <a class="link" href="#contacto">Trabajemos juntos</a>
-                    </li>
-                </ol>
+            <h1 class="logo">Mario González</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#technologies">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="about" class="about-section">
         <div class="container">
-            <h1>
-                Hola! Soy
-                <strong>Mario González</strong><br>
-                <strong>Desarrollador Python</strong><br> con mucha pasión por aprender.
-            </h1>
-            <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="Imagen de hero">
-        </div>
-    </section>
-
-    <section id="portafolio" class="portfolio">
-        <div class="container">
-            <h2>Portafolio (Proyectos Destacados)</h2>
-
-            <article class="project">
-                <div class="project-details">
-                    <h3 class="portfolio-title">Biences Raíces Pagina Web</h3>
-                    <h6 class="project-course">HTML y CSS</h6>
-                    <p class="project-date"><small><Strong>Fecha:</Strong> 03/12/2020</small></p>
-                    <p class="project-url"><small><Strong>Puedes verlo:</Strong>
-              <a href="https://mariogonzcardona.github.io/udemy_bienesraices.io/" target="_blank">Justo
-                Aqui...</a></small></p>
-                    <p class="project-description">Bienes raíces es un proyecto desarrollado en HTML y CSS puro, para practicar habilidades de desarrollo web, sin implementación de algún Backend, por cuestiones didácticas.</p>
+            <div class="about-content">
+                <!-- Imagen de perfil a la izquierda -->
+                <div class="about-image">
+                    <img src="./images/MarioGH.png" alt="Foto de Mario González">
                 </div>
-                <figure class="project-imageContainer">
-                    <img class="project-image" src="images/bienesraices.jpg" alt="Biences Raíces Pagina Web" width="100%">
-                </figure>
-            </article>
-
-            <article class="project">
-                <div class="project-details">
-                    <h3 class="portfolio-title">Somos Deporte México</h3>
-                    <h6 class="project-course">Python Django</h6>
-                    <p class="project-date"><small><Strong>Fecha:</Strong> 02/01/2020</small></p>
-                    <p class="project-url"><small><Strong>Puedes verlo:</Strong>
-              <a href="http://mariogonzcardona.pythonanywhere.com/" target="_blank">Justo Aqui...</a></small></p>
-                    <p class="project-description">Somos Deporte México es una pagina aun en desarrollo con Python y el famoso framework Django, el objetivo de dicha pagina es promocionar eventos deportivos en la ciudad de México.</p>
-                </div>
-                <figure class="project-imageContainer">
-                    <img class="project-image" src="images/SDM.png" alt="Somos deporte Mexico Pagina Web" width="100%">
-                </figure>
-            </article>
-
-            <article class="project">
-                <div class="project-details">
-                    <h3 class="portfolio-title">Page Movie.es</h3>
-                    <h6 class="project-course">HTML y CSS</h6>
-                    <p class="project-date"><small><Strong>Fecha:</Strong> 16/06/2020</small></p>
-                    <p class="project-url"><small><Strong>Puedes verlo:</Strong>
-              <a href="https://mariogonzcardona.github.io/movi.es/" target="_blank">Justo Aqui...</a></small></p>
-                    <p class="project-description">Movi.es es una pagina desarrollada en HTML y CSS, con el fin de reforzar los conocimientos adquiridos en desarrollo Frontend como parte del curso de Platzi y desarrollo web online.
+                <!-- Texto a la derecha -->
+                <div class="about-text">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Desarrollador backend con 10 años de experiencia, incluyendo 4 con Django, con habilidades en Python, Kotlin y bases de datos como MySQL/PostgreSQL. Competente en herramientas operativas y control de versiones con Git, además del despliegue de contenedores con Docker y la gestión de infraestructura en AWS. Enfocado en ofrecer soluciones tecnológicas robustas y escalables.
                     </p>
+                    
                 </div>
-                <figure class="project-imageContainer">
-                    <img class="project-image" src="images/Movi.es.jpg" alt="Somos deporte Mexico Pagina Web" width="100%">
-                </figure>
-            </article>
-
-            <article class="project">
-                <div class="project-details">
-                    <h3 class="portfolio-title">Cursos y Certificados</h3>
-                    <h6 class="project-course">Platzi y Udemy</h6>
-                    <p class="project-date"><small><Strong>Fecha:</Strong> 16/06/2020</small></p>
-                    <p class="project-url"><small><Strong>Puedes verlo:</Strong>
-              <a href="https://drive.google.com/drive/folders/11j5dE1T1Cqv8DlQ8eGzqCV14FHk2JYWU?usp=sharing"
-                target="_blank">Justo Aqui...</a></small></p>
-                    <p class="project-description">En este enlace se pueden visualizar algunos de los cursos aprobados en diferentes plataformas de aprendizaje online como Udemy y Platzi, para la parte de Backend asi como introducción a Frontend.
-                    </p>
-                </div>
-                <figure class="project-imageContainer">
-                    <img class="project-image" src="images/certificados.jpg" alt="Somos deporte Mexico Pagina Web" width="100%">
-                </figure>
-            </article>
-        </div>
-    </section>
-
-    <div class="container">
-        <h2 class="event-list-title">Más sobre mi experiencia</h2>
-    </div>
-
-    <section id="eventos" class="event-list">
-        <div class="container">
-            <article class="event">
-                <figure class="event-imageContainer">
-                    <img class="event-image" src="images/Annie.gif" width="600" />
-                </figure>
-                <div class="event-detail">
-                    <h3 class="event-title">Desarrollo de Videojuegos Terapeuticos</h3>
-                    <p class="event-description">Desarrollo, con enfoque al diseño e implementación de videojuegos terapéuticos para personas con alguna discapacidad motriz este fue el primer prototipo funcional.</p>
-                    <a class="event-url" href="https://youtu.be/uwQzZUOhVho" target="_blank">Ver Video</a>
-                </div>
-            </article>
-
-            <article class="event">
-                <figure class="event-imageContainer">
-                    <img class="event-image" src="images/galaxy-golf.gif" width="600" />
-                </figure>
-                <div class="event-detail">
-                    <h3 class="event-title">Golf Galaxy</h3>
-                    <p class="event-description">Golf Galaxy tiene la temática de estar jugando en el espacio, el objetivo principal es atrapar la mayor cantidad de mounstros en el menor tiempo posible, todo esto con el movimiento de las manos en tiempo real.
-                    </p>
-                    <a class="event-url" href="https://youtu.be/fPPLpLd69DI" target="_blank">Ver Video</a>
-                </div>
-            </article>
-
-            <article class="event">
-                <figure class="event-imageContainer">
-                    <img class="event-image" src="images/galaxy-fly.gif" width="600" />
-                </figure>
-                <div class="event-detail">
-                    <h3 class="event-title">Aircraft Galaxy</h3>
-                    <p class="event-description">Aircraft Galaxy, es un juego de aviones el cual tiene que ser manipulado para cruzar cada aro el objetivo es terminar en el menor tiempo posible cruzando la mayor cantidad de aros.
-                    </p>
-                    <a class="event-url" href="https://youtu.be/9CHvypWJ-84" target="_blank">Ver Video</a>
-                </div>
-            </article>
-
-            <article class="event">
-                <figure class="event-imageContainer">
-                    <img class="event-image" src="images/Cube-Galaxy.gif" width="600" />
-                </figure>
-                <div class="event-detail">
-                    <h3 class="event-title">Cube Galaxy</h3>
-                    <p class="event-description">Cube Galaxy, consiste en volcar el cubo para llevarlo hasta el punto amarillo, realizando la menor cantidad de movimientos en el menor tiempo posible.
-                    </p>
-                    <a class="event-url" href="https://youtu.be/LBUvn174qT0" target="_blank">Ver Video</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <form action="mailto:alejandrogonzalez@uadec.edu.mx" method="post" enctype="text/plain" class="form-email">
-                <h3>¿Creamos algo juntos?</h3>
-                <input type="text" placeholder="Déjame tu email" id="email" name="mail">
-                <button type="submit">Enviar</button>
-            </form>
-            <div class="social">
-                <a href="https://twitter.com/MarioGlzCardona" class="social-link twitter"></a>
-                <!-- <a href="https://facebook.com/MarioAlejandroGonzalezCardona" class="social-link facebook"></a> -->
-                <a href="https://github.com/mariogonzcardona" class="social-link github"></a>
-                <a href="https://instagram.com/mariogonzcardona" class="social-link instagram"></a>
             </div>
         </div>
     </section>
 
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <div class="experience-card">
+                <h3>Qbitss - Python Developer</h3>
+                <p><strong>08/12/2022 - Hoy</strong></p>
+                <p>Desarrollo e implementación de aplicaciones backend utilizando Django Rest Framework, con PostgreSQL como base de datos. Creación de APIs y servicios web, implementación de lógica de negocio, y enfoque en seguridad del sistema y rendimiento. Integración front-end usando Vue.js, con componentes reactivos y capacidades de gestión de estado para mejorar la experiencia del usuario, así como proyectos de reingeniería completa.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Pintacomex - Python Developer</h3>
+                <p><strong>23/05/2022 - 08/12/2022</strong></p>
+                <p>Desarrollo y ejecución de aplicaciones web, implementando Django y Django Rest Framework, MySQL como base de datos principal, y desarrollo de aplicaciones móviles con Kotlin y Android.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Deloitte - Python SDET</h3>
+                <p><strong>18/10/2021 - 16/05/2022</strong></p>
+                <p>Configuración, mantenimiento y ejecución de marcos de automatización de pruebas en múltiples plataformas de aplicaciones, como Móvil, Desktop y Web, y creación de escenarios de prueba y pruebas de aceptación.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Tesys21 - Python Developer</h3>
+                <p><strong>24/11/2020 - 16/09/2021</strong></p>
+                <p>Desarrollo de sistemas de E-Commerce para tiendas de productos en línea, utilizando Odoo 13 y PostgreSQL, y modelado de interfaces utilizando HTML5, CSS3 y Django como framework.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Deca Group - Python Developer</h3>
+                <p><strong>20/06/2019 - 07/04/2020</strong></p>
+                <p>Diseño y desarrollo de servicios en Python, automatización de procesos EDI o Electronic Data Interchange para Ryder en envíos terrestres. Integración de APIs para conectar distintos sistemas y facilitar la transferencia de datos, mejorando los tiempos de procesamiento en un 30%.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-category">
+                <h3>Frontend</h3>
+                <div class="skills-icons">
+                    <img src="/images/icons_2/html-5.png" alt="HTML5">
+                    <img src="/images/icons_2/css-3.png" alt="CSS3">
+                    <img src="/images/icons_2/bootstrap.png" alt="Bootstrap">
+                    <img src="/images/icons_2/javascript_icon.png" alt="JavaScript">
+                    <img src="/images/icons_2/vuejs_icon.png" alt="Vue.js">
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Backend</h3>
+                <div class="skills-icons">
+                    <img src="/images/icons_2/python_icon.png" alt="Python">
+                    <img src="/images/icons_2/django_icon.png" alt="Django">
+                    <img src="/images/icons_2/fastapi_icon.png" alt="FastAPI">
+                    <img src="/images/icons_2/flask_icon.png" alt="Flask">
+                    <img src="/images/icons_2/kotlin_icon.png" alt="Kotlin">
+                    <img src="/images/icons_2/mysql_icon.png" alt="MySQL">
+                    <img src="/images/icons_2/postgresql_icon.png" alt="PostgreSQL">
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Cloud & DevOps</h3>
+                <div class="skills-icons">
+                    <img src="../images/git_icon.png" alt="Git">
+                    <img src="../images/docker_icon.png" alt="Docker">
+                    <img src="../images/aws_icon.png" alt="AWS">
+                    <img src="../images/gcp_icon.png" alt="Google Cloud Platform">
+                    <img src="../images/api_icon.png" alt="API">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Curso de desarrollo web online 2020
-                <img width="80px" src="images/platzi.png" alt="Logo de platzi">
-            </p>
-            <div>
-                <p>
-                    Diseñado para aprender Desarrollo Web
-                </p>
+            <p>© 2024 Mario González. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://github.com/mariogonzcardona" target="_blank">GitHub</a>
+                <a href="https://twitter.com/MarioGlzCardona" target="_blank">Twitter</a>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
