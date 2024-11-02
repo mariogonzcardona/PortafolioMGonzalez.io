@@ -19,11 +19,13 @@
     <header class="navbar">
         <div class="container">
             <h1 class="logo">Mario González</h1>
+            <!-- Icono de menú hamburguesa -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">Sobre mí</a></li>
                     <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#technologies">Habilidades</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
@@ -83,36 +85,48 @@
     <section id="skills" class="skills-section">
         <div class="container">
             <h2>Habilidades</h2>
-            <div class="skills-category">
-                <h3>Frontend</h3>
-                <div class="skills-icons">
-                    <img src="/images/icons_2/html-5.png" alt="HTML5">
-                    <img src="/images/icons_2/css-3.png" alt="CSS3">
-                    <img src="/images/icons_2/bootstrap.png" alt="Bootstrap">
-                    <img src="/images/icons_2/javascript_icon.png" alt="JavaScript">
-                    <img src="/images/icons_2/vuejs_icon.png" alt="Vue.js">
+            <div class="skills-container-horizontal">
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-icons">
+                        <img src="/images/icons_2/javascript_icon.png" alt="JavaScript">
+                        <img src="/images/icons_2/html-5.png" alt="HTML5">
+                        <img src="/images/icons_2/css-3.png" alt="CSS3">
+                        <img src="/images/icons_2/bootstrap.png" alt="Bootstrap">
+                        <img src="/images/icons_2/tailwind_icon.png" alt="Tailwind">
+                        <img src="/images/icons_2/vuejs_icon.png" alt="Vue.js">
+                        <img src="/images/icons_2/node_icon.png" alt="Node.js">
+                        <img src="/images/icons_2/npm_icon.png" alt="NPM">
+                        <img src="/images/icons_2/mongodb_icon.png" alt="Mongo DB">
+                    </div>
                 </div>
-            </div>
-            <div class="skills-category">
-                <h3>Backend</h3>
-                <div class="skills-icons">
-                    <img src="/images/icons_2/python_icon.png" alt="Python">
-                    <img src="/images/icons_2/django_icon.png" alt="Django">
-                    <img src="/images/icons_2/fastapi_icon.png" alt="FastAPI">
-                    <img src="/images/icons_2/flask_icon.png" alt="Flask">
-                    <img src="/images/icons_2/kotlin_icon.png" alt="Kotlin">
-                    <img src="/images/icons_2/mysql_icon.png" alt="MySQL">
-                    <img src="/images/icons_2/postgresql_icon.png" alt="PostgreSQL">
+                <div class="skills-category">
+                    <h3>Backend</h3>
+                    <div class="skills-icons">
+                        <img src="/images/icons_2/python_icon.png" alt="Python">
+                        <img src="/images/icons_2/django_icon.png" alt="Django">
+                        <img src="/images/icons_2/fastapi_icon.png" alt="FastAPI">
+                        <img src="/images/icons_2/kotlin_icon.png" alt="Kotlin">
+                        <img src="/images/icons_2/mysql_icon.png" alt="MySQL">
+                        <img src="/images/icons_2/postgresql_icon.png" alt="PostgreSQL">
+                        <img src="/images/icons_2/pandas_icon.png" alt="Pandas">
+                        <img src="/images/icons_2/postman_icon.png" alt="Postman">
+                        <img src="/images/icons_2/swagger_icon.png" alt="Swagger">
+                    </div>
                 </div>
-            </div>
-            <div class="skills-category">
-                <h3>Cloud & DevOps</h3>
-                <div class="skills-icons">
-                    <img src="../images/git_icon.png" alt="Git">
-                    <img src="../images/docker_icon.png" alt="Docker">
-                    <img src="../images/aws_icon.png" alt="AWS">
-                    <img src="../images/gcp_icon.png" alt="Google Cloud Platform">
-                    <img src="../images/api_icon.png" alt="API">
+                <div class="skills-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skills-icons">
+                        <img src="/images/icons_2/git_icon.png" alt="Git">
+                        <img src="/images/icons_2/gitlab_icon.png" alt="GitLab">
+                        <img src="/images/icons_2/docker_icon.png" alt="Docker">
+                        <img src="/images/icons_2/aws_icon.png" alt="AWS">
+                        <img src="/images/icons_2/gcp_icon.png" alt="Google Cloud Platform">
+                        <img src="/images/icons_2/android_icon.png" alt="Android">
+                        <img src="/images/icons_2/unity_icon.png" alt="Unity">
+                        <img src="/images/icons_2/vscode_icon.png" alt="VSCode">
+                        <img src="/images/icons_2/linux_icon.png" alt="Linux">
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,3 +145,26 @@
 </body>
 
 </html>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+
+    // Ocultar el menú cuando se hace clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
+
+    // Ocultar el menú cuando se hace clic fuera de él
+    document.addEventListener('click', (event) => {
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>

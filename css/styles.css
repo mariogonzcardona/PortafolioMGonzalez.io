@@ -8,7 +8,7 @@ body {
   /* Ajuste del fondo a la imagen proporcionada con tamaño adecuado y transparencia */
   background: url('../images/Space.jpg') no-repeat center center;
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor sin distorsión */
-  background-color: rgba(0, 0, 0, 0.5); /* Capa de color negro semitransparente encima de la imagen */
+  
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -81,7 +81,7 @@ nav {
 
 /* Seccion de About me */
 .about-section {
-  background: url('../images/background.jpg') no-repeat center center / cover; /* Agrega una imagen de fondo a la sección */
+  background: url('../images/background_2.jpg') no-repeat center center / cover; /* Agrega una imagen de fondo a la sección */
   background-size: cover;
   padding: 60px 20px;
   color: #333;
@@ -134,9 +134,9 @@ nav {
 
 /* Seccion de Experiencia */
 .experience-section {
-  background: url('../images/background_exp.jpg') no-repeat center center / cover; /* Agrega una imagen de fondo a la sección */
+  background: url('../images/background_exp_2.jpg') no-repeat center center / cover; /* Agrega una imagen de fondo a la sección */
   background-size: cover;
-  padding: 20px 20px;
+  padding: 10px 20px 40px 20px;
   color: #333;
   animation: fadeIn 2s ease-in;
   margin-bottom: 20px; /* Espacio para separar las secciones */
@@ -175,65 +175,76 @@ nav {
   line-height: 1.6;
 }
 
-/* Diseño Responsivo */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px 0;
-  }
-  .logo {
-    font-size: 2em;
-  }
-  .nav-links {
-    display: none;
-  }
-  .about-content {
-    flex-direction: column;
-  }
-  .about-text, .about-image img {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-  .experience-card {
-    padding: 15px;
-  }
-  .experience-section h2 {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-
+/* Sección de Habilidades */
 .skills-section {
-  padding: 60px 20px;
-  background: url('../images/background_exp.jpg') no-repeat center center / cover;
-  color: #ffffff;
+  padding: 10px 20px 40px 20px;
+  background: url('../images/background_exp_3.jpg') no-repeat center center / cover;
+  background-size: cover;
+  
   text-align: center;
+  animation: fadeIn 2s ease-in; /* Animación de aparición */
+  position: relative;
+  overflow: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: backgroundMove 10s linear infinite; /* Animación de movimiento de fondo */
+  z-index: 0;
+}
+
+@keyframes backgroundMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+.skills-container-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 1;
 }
 
 .skills-category {
-  margin-bottom: 40px;
+  flex: 1;
+  min-width: 320px; /* Establece un ancho mínimo para cada cuadro */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1.5s ease;
+}
+
+.skills-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff; /* Color blanco */
+    text-shadow: none; /* Sin sombra */
 }
 
 .skills-category h3 {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .skills-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
 }
 
 .skills-icons img {
@@ -246,16 +257,66 @@ nav {
   transform: scale(1.2);
 }
 
+/* Diseño Responsivo */
 @media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Esconder los enlaces de navegación en dispositivos móviles si es necesario */
+  }
+
+  .skills-container-horizontal {
+      flex-direction: column;
+      gap: 20px;
+  }
+
   .skills-icons {
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
   }
 
-  .skills-category h3 {
-      font-size: 1.5em;
+  /* Estilos Responsivos para la sección Sobre mí */
+  .about-content {
+      flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+      padding: 20px;
   }
 
-  .skills-icons img {
-      width: 50px;
+  .about-image img {
+      width: 100%; /* Ajusta el ancho de la imagen para que ocupe todo el contenedor */
+      max-width: 300px;
+      margin-bottom: 20px; /* Añade un espacio debajo de la imagen */
+  }
+
+  .about-text {
+      max-width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
+  }
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto por defecto */
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mostrar el ícono de menú hamburguesa solo en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Muestra el ícono de menú hamburguesa en pantallas pequeñas */
+  }
+
+  .nav-links {
+      display: none; /* Oculta el menú de navegación por defecto en pantallas pequeñas */
+  }
+
+  /* Clase para mostrar el menú cuando está activo en pantallas pequeñas */
+  .nav-links.active {
+      display: flex;
+  }
+}
+
+/* Mostrar el menú de navegación normalmente en pantallas grandes */
+@media (min-width: 769px) {
+  .nav-links {
+      display: flex; /* Muestra el menú de navegación horizontal */
+      gap: 20px;
   }
 }
