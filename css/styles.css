@@ -177,14 +177,14 @@ nav {
 
 /* Sección de Habilidades */
 .skills-section {
-  padding: 10px 20px 40px 20px;
+  padding: 10px 40px 40px 40px; /* Aumenta el padding en los lados para darle más espacio */
   background: url('../images/background_exp_3.jpg') no-repeat center center / cover;
   background-size: cover;
-  
   text-align: center;
   animation: fadeIn 2s ease-in; /* Animación de aparición */
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .skills-section::before {
@@ -210,7 +210,7 @@ nav {
 .skills-container-horizontal {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 60px; /* Aumenta el espacio entre columnas */
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
@@ -319,4 +319,141 @@ nav {
       display: flex; /* Muestra el menú de navegación horizontal */
       gap: 20px;
   }
+}
+
+
+/* Sección de Proyectos */
+.project-list {
+  padding: 10px 40px 40px 40px; /* Aumenta el padding en los lados para darle más espacio */
+  background: url('../images/background_3.jpg') no-repeat center center / cover;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Asegura que el fondo animado no sobresalga */
+  animation: fadeIn 2s ease-in; /* Añade una animación de aparición para la sección */
+}
+
+.project-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Hereda el fondo de la sección */
+  z-index: -1; /* Envía la animación al fondo */
+  animation: backgroundMove 10s linear infinite; /* Animación de movimiento de fondo */
+}
+
+.project-list h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.project-row {
+  display: flex;
+  gap: 30px; /* Aumenta el espacio entre columnas */
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  color: #333333;
+  width: 17rem;
+  padding: 0;
+  animation: slideIn 1.5s ease; /* Aplica animación de deslizamiento */
+  opacity: 0; /* Inicializa opacidad en 0 */
+  animation-fill-mode: forwards; /* Asegura que el estado final de la animación se mantenga */
+}
+
+.project-imageContainer {
+  width: 100%;
+  height: 180px; /* Ajusta la altura según prefieras */
+  margin: 0; /* Elimina el margen */
+  padding: 0; /* Elimina el padding */
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+
+.project-detail {
+  padding: 5px 20px 20px 20px;
+  display: flex;
+  flex-direction: column; /* Organiza el contenido en una columna */
+  flex-grow: 1; /* Permite que `.project-detail` ocupe todo el espacio disponible en la tarjeta */
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #666666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-url {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: auto; /* Mueve el botón hacia la parte inferior del contenedor */
+}
+
+.project-url:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 1024px) {
+  .project-card {
+      width: 45%; /* Dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+      width: 100%; /* Una tarjeta por fila en pantallas pequeñas */
+  }
+}
+
+
+/* Animación secuencial para cada tarjeta */
+.project-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 1.2s;
 }
