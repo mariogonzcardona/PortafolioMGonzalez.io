@@ -331,6 +331,7 @@ nav {
   position: relative;
   overflow: hidden; /* Asegura que el fondo animado no sobresalga */
   animation: fadeIn 2s ease-in; /* Añade una animación de aparición para la sección */
+  margin-bottom: 20px; /* Espacio para separar las secciones */
 }
 
 .project-list::before {
@@ -456,4 +457,88 @@ nav {
 
 .project-card:nth-child(4) {
   animation-delay: 1.2s;
+}
+
+/* Footer profesional y moderno */
+.footer{
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+}
+.footer-flex {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-form input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  font-size: 1em;
+}
+
+.footer-form button {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1em;
+}
+
+.footer-form button:hover {
+  background-color: #1565c0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #f3f3f3;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #90caf9;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.95em;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-form input[type="email"] {
+    width: 100%;
+  }
+
+  .footer-form {
+    justify-content: center;
+  }
 }
